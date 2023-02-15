@@ -1,5 +1,7 @@
 //! Muffin is a background job processing library designed to work with MongoDB as its storage backend.
 //!
+//! *Requires MongoDB 6 with feature compatibility level set to `6`.*
+//!
 //! # Features
 //! - Asynchronous processing using [`Tokio`](https://docs.rs/tokio/latest/tokio/)
 //! - Job objects serialized with [`Serde`](https://docs.rs/serde/latest/serde/)

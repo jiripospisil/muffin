@@ -2,6 +2,8 @@
 
 Muffin is a background job processing library designed to work with MongoDB as its storage backend.
 
+*Requires MongoDB 6 with feature compatibility level set to `6`.*
+
 - [Documentation](https://docs.rs/muffin)
 - [Crates.io](https://crates.io/crates/muffin)
 
