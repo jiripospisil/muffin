@@ -1,0 +1,26 @@
+[package]
+name = "muffin"
+description = "Muffin is a background job processing library designed to work with MongoDB as its storage backend."
+version = "0.1.0"
+authors = ["Jiri Pospisil <jiri@jpospisil.com>"]
+edition = "2021"
+license = "MIT"
+keywords = ["job", "background", "processing", "queue", "worker"]
+repository = "https://github.com/jiripospisil/muffin"
+
+[dependencies]
+async-trait = "0.1.61"
+chrono = "0.4.23"
+futures = "0.3.25"
+mongodb = { version = "2.3.1", features = ["bson-chrono-0_4"] }
+parking_lot = "0.12.1"
+serde = "1.0.152"
+serde_json = "1.0.91"
+smallvec = "1.10.0"
+thiserror = "1.0.38"
+tokio = "1.24.1"
+
+[dev-dependencies]
+expecting = "0.4.0"
+rand = "0.8.5"
+tokio = { version = "1.24.1", features = ["full"] }
