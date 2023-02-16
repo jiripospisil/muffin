@@ -51,8 +51,12 @@ pub async fn create_indexes(config: &Config) -> Result<()> {
     };
     let indexes = [
         IndexModel::builder()
-            .keys(doc! { "state": 1 })
-            .options(IndexOptions::builder().name("state".to_string()).build())
+            .keys(doc! { "priority": 1, "status": 1, "type": 1, "process_at": 1 })
+            .options(
+                IndexOptions::builder()
+                    .name("find_and_lock".to_string())
+                    .build(),
+            )
             .build(),
         IndexModel::builder()
             .keys(doc! { "unique_key": 1 })
